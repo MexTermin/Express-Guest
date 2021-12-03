@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') -%>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <%- include('partials/header') -%>
+      <div class="col-sm-12 pt-3 list-group">
+          <h3 style="border-bottom: 1px solid rgba(0, 0, 0, 0.199);">Notas</h3>
+        <!-- <hr> -->
+        <% if(entries.length){ %>
+            <% entries.forEach( (item) => {  %>
+                <div class="list-group-item list-group-item-primary mb-1 notas-container">
+                    <div class="notas-title mt-1"><%= item.title %></div>
+                    <div class="">
+                      <span class="notas-fecha">Fecha: <%= item.published %> </span>
+                      <p class="notas-body"><%= item.content %></p>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <h1>No existen entradas</h1>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

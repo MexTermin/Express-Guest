@@ -1,0 +1,22 @@
+.container {
+}
+
+.notas-container {
+  height: fit-content;
+  /* padding:5px !important; */
+}
+
+.notas-title {
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+  font-size: 1.3em;
+}
+
+.notas-fecha {
+  color: rgba(0, 0, 0, 0.486);
+}
+
+.notas-body {
+    color: black;
+    margin-bottom:0px;
+}
