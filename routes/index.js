@@ -18,10 +18,11 @@ module.exports = (app) => {
         if (!data.title || !data.body) {
             res.send(400).json({ "message": "los campos no pueden estar vacios" })
         }
+        const date = new Date();
         const newEntry = {
             title: data.title,
             content: data.body,
-            published: new Date()
+            published: `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`
         }
         entries.push(newEntry)
         res.render("index", { title: "home", data: [newEntry] })
